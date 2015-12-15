@@ -5,7 +5,7 @@
 
 #bubbleSort algorithm
 def bubbleSort(nums):
-    for j in xrange(len(numbers),-1,-1):
+    for j in xrange(len(nums),-1,-1):
         for i in xrange(0,j-1,1):
             if nums[i] > nums[i+1]:
                 nums[i],nums[i+1] = nums[i+1],nums[i]
