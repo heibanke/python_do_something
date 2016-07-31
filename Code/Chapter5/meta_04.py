@@ -3,8 +3,8 @@
 #http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Metaprogramming.html
 
 class RegisterClasses(type):
-    def __init__(cls, name, bases, nmspc):
-        super(RegisterClasses, cls).__init__(name, bases, nmspc)
+    def __init__(cls, name, bases, atts):
+        super(RegisterClasses, cls).__init__(name, bases, atts)
         if not hasattr(cls, 'registry'):
             cls.registry = set()
         
