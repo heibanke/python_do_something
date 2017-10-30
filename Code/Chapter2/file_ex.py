@@ -13,12 +13,12 @@ f.close()
 
 #read file
 f=codecs.open('file_ch.txt','r','utf-8')
-print f.readline()
-print f.readline()
-print f.readline()
+print(f.readline())
+print(f.readline())
+print(f.readline())
 f.close()
 ########################## os ################
 import os
-print os.path.exists('file_ch.txt')
+print(os.path.exists('file_ch.txt'))
 os.rename('file_ch.txt', 'file_test.txt')
-print os.path.exists('file_ch.txt')
+print(os.path.exists('file_ch.txt'))

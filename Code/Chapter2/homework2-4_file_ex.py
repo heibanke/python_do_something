@@ -25,7 +25,7 @@ jt_info=s_tmp.split(',')
 
 jt_stations = jt_info[-1].split('\r\n \r\n')
 
-print jt_info[1]
+print(jt_info[1])
 
 # convert stations info format
 station_pattern = (r'(?P<number>[0-9]+)\s(?P<name>\D+)')
@@ -33,16 +33,16 @@ station_pattern = (r'(?P<number>[0-9]+)\s(?P<name>\D+)')
 station_list = []
 stations = re.findall(station_pattern,jt_info[-1]) 
 for tmp in stations:
-    print tmp[0],tmp[1].strip()
+    print(tmp[0],tmp[1].strip())
     station_list.append(tmp[1].strip())
     
-print "-------------------------------------------------"
+print("-------------------------------------------------")
 
 for tmp in jt_stations:
     stations = re.search(station_pattern,tmp.strip())
-    print stations.group('number'),stations.group('name')
+    print(stations.group('number'),stations.group('name'))
 
 result={}
 result[jt_info[1]]=station_list
 
-print result
+print(result)

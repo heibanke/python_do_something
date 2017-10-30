@@ -41,13 +41,13 @@ if a:
 else:
     sum_i=sum(range(100000))
 
-print sum_i
+print(sum_i)
 
 time.sleep(2)
 end_time = time.time()
 end_clock = time.clock()
 
-print "time-delta:"
-print start_time-end_time
-print "clock-delta:"
-print start_clock-end_clock
+print("time-delta:")
+print(start_time-end_time)
+print("clock-delta:")
+print(start_clock-end_clock)

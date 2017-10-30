@@ -8,11 +8,12 @@ import re
 csvfile = open('beijing_jt.csv','r')
 
 reader = csv.reader(csvfile)
-reader.next()
+# reader.next() only can use in py2
+next(reader)
 
-jt_info = reader.next()
+jt_info = next(reader)
 
-print jt_info[1].decode('utf-8')
+print(jt_info[1].decode('utf-8'))
         
 csvfile.close()
 
@@ -22,10 +23,10 @@ station_list = []
 
 stations = re.findall(station_pattern,jt_info[-1].decode('utf-8')) 
 for tmp in stations:
-    print tmp[0],tmp[1].strip()
+    print(tmp[0],tmp[1].strip())
     station_list.append(tmp[1].strip())
     
 result={}
 result[jt_info[1]]=station_list
 
-print result    
+print(result)
